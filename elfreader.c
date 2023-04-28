@@ -150,9 +150,46 @@ void print_header(unsigned char ident[EI_NIDENT], uint8_t class, void *header) {
   printf("\n");
 
   printf("Machine: %08X, ", header32->e_machine);
-  /* switch (header32->e_machine) { */
-  /*   ... */
-  /* } */
+  switch (header32->e_machine) {
+    case 0:
+      printf("Unknowe machine");
+      break;
+    case 1:
+      printf("AT&T WE 32100");
+      break;
+    case 2:
+      printf("Sun Microsystems SPARC");
+      break;
+    case 3:
+      printf("Intel 80386");
+      break;
+    case 4:
+      printf("Motorola 68000");
+      break;
+    case 5:
+      printf("Motorola 88000");
+      break;
+    case 6:
+      printf("Intel 80860");
+      break;
+    case 7:
+      printf("Intel i860");
+      break;
+    case 8:
+      printf("MIPS RS3000 Big-Endian");
+      break;
+    case 9:
+      printf("IBM System/370 Processor");
+      break;
+    case 10:
+      printf("MIPS RS3000 Little-Endian");
+      break;
+    case 11:
+      printf("RS6000");
+      break;
+    default:
+      printf("Unknown machine*");
+  }
   printf("\n");
 
   if (0x02 == class) {
