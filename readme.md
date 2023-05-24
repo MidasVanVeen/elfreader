@@ -8,4 +8,4 @@ $ ./elfreader <file>
 ```
 
 ## Disclamer
-Work in progress so I can't promise anything is memory
+Work in progress so I can't promise anything is memorysafe
